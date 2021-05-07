@@ -3,19 +3,13 @@
 {-# LANGUAGE PatternSynonyms, ViewPatterns #-}
 {-# OPTIONS_GHC -Wall -fno-warn-tabs #-}
 
-module Types (
-	PangoScript(..), mkMemberPangoScript,
-	PangoLanguage(..),
-	pangoLanguageFromString,
-	) where
+module Types where
 
 import Language.Haskell.TH
 import Foreign.Ptr
 import Foreign.C.String
 import Data.Int
 import System.IO.Unsafe
-
-#include <pango/pango.h>
 
 mkMemberGen :: Name -> Name -> String -> Integer -> DecsQ
 mkMemberGen t c n v = sequence [
@@ -25,7 +19,7 @@ mkMemberGen t c n v = sequence [
 		(conP c [litP (IntegerL v)])
 	]
 
-newtype PangoScript = PangoScript #{type PangoScript} deriving Show
+newtype PangoScript = PangoScript Int32 deriving Show
 
 mkMemberPangoScript :: String -> Integer -> DecsQ
 mkMemberPangoScript = mkMemberGen ''PangoScript 'PangoScript
