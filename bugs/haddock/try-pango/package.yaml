@@ -35,18 +35,4 @@ dependencies:
 
 library:
   source-dirs: src
-  c-sources:
-  - csrc/pango_log_attr.c
-  include-dirs: include
   pkg-config-dependencies: pangocairo
-
-tests:
-  try-pango-test:
-    main:                Spec.hs
-    source-dirs:         test
-    ghc-options:
-    - -threaded
-    - -rtsopts
-    - -with-rtsopts=-N
-    dependencies:
-    - try-pango
