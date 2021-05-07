@@ -1,0 +1,252 @@
+name:                try-pango
+version:             0.1.0.0
+github:              "githubuser/try-pango"
+license:             BSD3
+author:              "Author name here"
+maintainer:          "example@example.com"
+copyright:           "2020 Author name here"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/githubuser/try-pango#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- template-haskell
+- containers
+- array
+- bytestring
+- text
+- primitive
+- simple-cairo
+- cairo-image
+- JuicyCairo
+- JuicyPixels
+- nowdoc
+
+library:
+  source-dirs: src
+  c-sources:
+  - csrc/pango_log_attr.c
+  include-dirs: include
+  pkg-config-dependencies: pangocairo
+
+executables:
+  try-pango-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - try-pango
+  try-pango-context:
+    main:                try-pango-context.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - try-pango
+  try-pango-layout:
+    main:                try-pango-layout.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - try-pango
+  try-pango-simple:
+    main:                try-pango-simple.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - try-pango
+  try-pango-fonts:
+    main:                try-pango-fonts.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - try-pango
+  try-pango-fonts-unset:
+    main:                try-pango-fonts-unset.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - try-pango
+  try-pango-fonts-variations:
+    main:                try-pango-fonts-variations.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - try-pango
+  try-pango-fonts-montserrat:
+    main:                try-pango-fonts-montserrat.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - try-pango
+  try-pango-fonts-soulcraft:
+    main:                try-pango-fonts-soulcraft.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - try-pango
+  try-pango-fonts-literata:
+    main:                try-pango-fonts-literata.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - try-pango
+  try-variations:
+    main:                try-variations.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - try-pango
+  try-pango-fonts-source-han-sans-vf:
+    main:                try-pango-fonts-source-han-sans-vf.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - try-pango
+  try-pango-font-description-add-axis:
+    main:                try-pango-font-description-add-axis.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - try-pango
+  try-pango-markup:
+    main:                try-pango-markup.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - try-pango
+  try-glib-quark:
+    main:                try-glib-quark.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - try-pango
+  try-pango-attrs-markup:
+    main:                try-pango-attrs-markup.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - try-pango
+  try-pango-attrs-markup-stream:
+    main:                try-pango-attrs-markup-stream.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - try-pango
+  try-pango-attrs:
+    main:                try-pango-attrs.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - try-pango
+  try-pango-language:
+    main:                try-pango-language.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - try-pango
+  try-pango-gravity:
+    main:                try-pango-gravity.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - try-pango
+  try-pango-layout-innocuous:
+    main:                try-pango-layout-innocuous.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - try-pango
+  try-pango-tab-array:
+    main:                try-pango-tab-array.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - try-pango
+
+tests:
+  try-pango-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - try-pango

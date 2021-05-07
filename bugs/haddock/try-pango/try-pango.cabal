@@ -1,0 +1,631 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 9a804ba416e9c3723168da71a0281e4014ec73ea3db97949c4759637b1528d9d
+
+name:           try-pango
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/try-pango#readme>
+homepage:       https://github.com/githubuser/try-pango#readme
+bug-reports:    https://github.com/githubuser/try-pango/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2020 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/try-pango
+
+library
+  exposed-modules:
+      Data.Text.CString
+      Data.Text.Gunichar
+      Foreign.C.String.Tools
+      Foreign.C.String.Utf8
+      Graphics.Pango.Basic.Fonts.PangoFontDescription
+      Graphics.Pango.Basic.Fonts.PangoFontDescription.Type
+      Graphics.Pango.Basic.Fonts.PangoFontDescription.Variations
+      Graphics.Pango.Basic.LayoutObjects
+      Graphics.Pango.Basic.LayoutObjects.PangoLayout
+      Graphics.Pango.Basic.LayoutObjects.PangoLayout.Template
+      Graphics.Pango.Basic.Rendering
+      Graphics.Pango.Basic.ScriptsAndLanguages.PangoLanguage
+      Graphics.Pango.Basic.ScriptsAndLanguages.PangoScript
+      Graphics.Pango.Basic.ScriptsAndLanguages.Types
+      Graphics.Pango.Basic.TabStops
+      Graphics.Pango.Basic.TextAttributes
+      Graphics.Pango.Basic.TextAttributes.Internal
+      Graphics.Pango.Basic.TextAttributes.Template
+      Graphics.Pango.Rendering.Cairo
+      Graphics.Pango.Template
+      Graphics.Pango.Types
+      Graphics.Pango.Values
+      System.Glib.ErrorReporting
+      System.Glib.Quarks
+      System.Glib.Quarks.Internal
+      System.Glib.SimpleXmlSubsetParser
+      System.Glib.SinglyLinkedLists
+  other-modules:
+      Paths_try_pango
+  hs-source-dirs:
+      src
+  include-dirs:
+      include
+  c-sources:
+      csrc/pango_log_attr.c
+  pkgconfig-depends:
+      pangocairo
+  build-depends:
+      JuicyCairo
+    , JuicyPixels
+    , array
+    , base >=4.7 && <5
+    , bytestring
+    , cairo-image
+    , containers
+    , nowdoc
+    , primitive
+    , simple-cairo
+    , template-haskell
+    , text
+  default-language: Haskell2010
+
+executable try-glib-quark
+  main-is: try-glib-quark.hs
+  other-modules:
+      Main
+      Paths_try_pango
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      JuicyCairo
+    , JuicyPixels
+    , array
+    , base >=4.7 && <5
+    , bytestring
+    , cairo-image
+    , containers
+    , nowdoc
+    , primitive
+    , simple-cairo
+    , template-haskell
+    , text
+    , try-pango
+  default-language: Haskell2010
+
+executable try-pango-attrs
+  main-is: try-pango-attrs.hs
+  other-modules:
+      Main
+      Paths_try_pango
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      JuicyCairo
+    , JuicyPixels
+    , array
+    , base >=4.7 && <5
+    , bytestring
+    , cairo-image
+    , containers
+    , nowdoc
+    , primitive
+    , simple-cairo
+    , template-haskell
+    , text
+    , try-pango
+  default-language: Haskell2010
+
+executable try-pango-attrs-markup
+  main-is: try-pango-attrs-markup.hs
+  other-modules:
+      Main
+      Paths_try_pango
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      JuicyCairo
+    , JuicyPixels
+    , array
+    , base >=4.7 && <5
+    , bytestring
+    , cairo-image
+    , containers
+    , nowdoc
+    , primitive
+    , simple-cairo
+    , template-haskell
+    , text
+    , try-pango
+  default-language: Haskell2010
+
+executable try-pango-attrs-markup-stream
+  main-is: try-pango-attrs-markup-stream.hs
+  other-modules:
+      Main
+      Paths_try_pango
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      JuicyCairo
+    , JuicyPixels
+    , array
+    , base >=4.7 && <5
+    , bytestring
+    , cairo-image
+    , containers
+    , nowdoc
+    , primitive
+    , simple-cairo
+    , template-haskell
+    , text
+    , try-pango
+  default-language: Haskell2010
+
+executable try-pango-context
+  main-is: try-pango-context.hs
+  other-modules:
+      Main
+      Paths_try_pango
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      JuicyCairo
+    , JuicyPixels
+    , array
+    , base >=4.7 && <5
+    , bytestring
+    , cairo-image
+    , containers
+    , nowdoc
+    , primitive
+    , simple-cairo
+    , template-haskell
+    , text
+    , try-pango
+  default-language: Haskell2010
+
+executable try-pango-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_try_pango
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      JuicyCairo
+    , JuicyPixels
+    , array
+    , base >=4.7 && <5
+    , bytestring
+    , cairo-image
+    , containers
+    , nowdoc
+    , primitive
+    , simple-cairo
+    , template-haskell
+    , text
+    , try-pango
+  default-language: Haskell2010
+
+executable try-pango-font-description-add-axis
+  main-is: try-pango-font-description-add-axis.hs
+  other-modules:
+      Main
+      Paths_try_pango
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      JuicyCairo
+    , JuicyPixels
+    , array
+    , base >=4.7 && <5
+    , bytestring
+    , cairo-image
+    , containers
+    , nowdoc
+    , primitive
+    , simple-cairo
+    , template-haskell
+    , text
+    , try-pango
+  default-language: Haskell2010
+
+executable try-pango-fonts
+  main-is: try-pango-fonts.hs
+  other-modules:
+      Main
+      Paths_try_pango
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      JuicyCairo
+    , JuicyPixels
+    , array
+    , base >=4.7 && <5
+    , bytestring
+    , cairo-image
+    , containers
+    , nowdoc
+    , primitive
+    , simple-cairo
+    , template-haskell
+    , text
+    , try-pango
+  default-language: Haskell2010
+
+executable try-pango-fonts-literata
+  main-is: try-pango-fonts-literata.hs
+  other-modules:
+      Main
+      Paths_try_pango
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      JuicyCairo
+    , JuicyPixels
+    , array
+    , base >=4.7 && <5
+    , bytestring
+    , cairo-image
+    , containers
+    , nowdoc
+    , primitive
+    , simple-cairo
+    , template-haskell
+    , text
+    , try-pango
+  default-language: Haskell2010
+
+executable try-pango-fonts-montserrat
+  main-is: try-pango-fonts-montserrat.hs
+  other-modules:
+      Main
+      Paths_try_pango
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      JuicyCairo
+    , JuicyPixels
+    , array
+    , base >=4.7 && <5
+    , bytestring
+    , cairo-image
+    , containers
+    , nowdoc
+    , primitive
+    , simple-cairo
+    , template-haskell
+    , text
+    , try-pango
+  default-language: Haskell2010
+
+executable try-pango-fonts-soulcraft
+  main-is: try-pango-fonts-soulcraft.hs
+  other-modules:
+      Main
+      Paths_try_pango
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      JuicyCairo
+    , JuicyPixels
+    , array
+    , base >=4.7 && <5
+    , bytestring
+    , cairo-image
+    , containers
+    , nowdoc
+    , primitive
+    , simple-cairo
+    , template-haskell
+    , text
+    , try-pango
+  default-language: Haskell2010
+
+executable try-pango-fonts-source-han-sans-vf
+  main-is: try-pango-fonts-source-han-sans-vf.hs
+  other-modules:
+      Main
+      Paths_try_pango
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      JuicyCairo
+    , JuicyPixels
+    , array
+    , base >=4.7 && <5
+    , bytestring
+    , cairo-image
+    , containers
+    , nowdoc
+    , primitive
+    , simple-cairo
+    , template-haskell
+    , text
+    , try-pango
+  default-language: Haskell2010
+
+executable try-pango-fonts-unset
+  main-is: try-pango-fonts-unset.hs
+  other-modules:
+      Main
+      Paths_try_pango
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      JuicyCairo
+    , JuicyPixels
+    , array
+    , base >=4.7 && <5
+    , bytestring
+    , cairo-image
+    , containers
+    , nowdoc
+    , primitive
+    , simple-cairo
+    , template-haskell
+    , text
+    , try-pango
+  default-language: Haskell2010
+
+executable try-pango-fonts-variations
+  main-is: try-pango-fonts-variations.hs
+  other-modules:
+      Main
+      Paths_try_pango
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      JuicyCairo
+    , JuicyPixels
+    , array
+    , base >=4.7 && <5
+    , bytestring
+    , cairo-image
+    , containers
+    , nowdoc
+    , primitive
+    , simple-cairo
+    , template-haskell
+    , text
+    , try-pango
+  default-language: Haskell2010
+
+executable try-pango-gravity
+  main-is: try-pango-gravity.hs
+  other-modules:
+      Main
+      Paths_try_pango
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      JuicyCairo
+    , JuicyPixels
+    , array
+    , base >=4.7 && <5
+    , bytestring
+    , cairo-image
+    , containers
+    , nowdoc
+    , primitive
+    , simple-cairo
+    , template-haskell
+    , text
+    , try-pango
+  default-language: Haskell2010
+
+executable try-pango-language
+  main-is: try-pango-language.hs
+  other-modules:
+      Main
+      Paths_try_pango
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      JuicyCairo
+    , JuicyPixels
+    , array
+    , base >=4.7 && <5
+    , bytestring
+    , cairo-image
+    , containers
+    , nowdoc
+    , primitive
+    , simple-cairo
+    , template-haskell
+    , text
+    , try-pango
+  default-language: Haskell2010
+
+executable try-pango-layout
+  main-is: try-pango-layout.hs
+  other-modules:
+      Main
+      Paths_try_pango
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      JuicyCairo
+    , JuicyPixels
+    , array
+    , base >=4.7 && <5
+    , bytestring
+    , cairo-image
+    , containers
+    , nowdoc
+    , primitive
+    , simple-cairo
+    , template-haskell
+    , text
+    , try-pango
+  default-language: Haskell2010
+
+executable try-pango-layout-innocuous
+  main-is: try-pango-layout-innocuous.hs
+  other-modules:
+      Main
+      Paths_try_pango
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      JuicyCairo
+    , JuicyPixels
+    , array
+    , base >=4.7 && <5
+    , bytestring
+    , cairo-image
+    , containers
+    , nowdoc
+    , primitive
+    , simple-cairo
+    , template-haskell
+    , text
+    , try-pango
+  default-language: Haskell2010
+
+executable try-pango-markup
+  main-is: try-pango-markup.hs
+  other-modules:
+      Main
+      Paths_try_pango
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      JuicyCairo
+    , JuicyPixels
+    , array
+    , base >=4.7 && <5
+    , bytestring
+    , cairo-image
+    , containers
+    , nowdoc
+    , primitive
+    , simple-cairo
+    , template-haskell
+    , text
+    , try-pango
+  default-language: Haskell2010
+
+executable try-pango-simple
+  main-is: try-pango-simple.hs
+  other-modules:
+      Main
+      Paths_try_pango
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      JuicyCairo
+    , JuicyPixels
+    , array
+    , base >=4.7 && <5
+    , bytestring
+    , cairo-image
+    , containers
+    , nowdoc
+    , primitive
+    , simple-cairo
+    , template-haskell
+    , text
+    , try-pango
+  default-language: Haskell2010
+
+executable try-pango-tab-array
+  main-is: try-pango-tab-array.hs
+  other-modules:
+      Main
+      Paths_try_pango
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      JuicyCairo
+    , JuicyPixels
+    , array
+    , base >=4.7 && <5
+    , bytestring
+    , cairo-image
+    , containers
+    , nowdoc
+    , primitive
+    , simple-cairo
+    , template-haskell
+    , text
+    , try-pango
+  default-language: Haskell2010
+
+executable try-variations
+  main-is: try-variations.hs
+  other-modules:
+      Main
+      Paths_try_pango
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      JuicyCairo
+    , JuicyPixels
+    , array
+    , base >=4.7 && <5
+    , bytestring
+    , cairo-image
+    , containers
+    , nowdoc
+    , primitive
+    , simple-cairo
+    , template-haskell
+    , text
+    , try-pango
+  default-language: Haskell2010
+
+test-suite try-pango-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_try_pango
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      JuicyCairo
+    , JuicyPixels
+    , array
+    , base >=4.7 && <5
+    , bytestring
+    , cairo-image
+    , containers
+    , nowdoc
+    , primitive
+    , simple-cairo
+    , template-haskell
+    , text
+    , try-pango
+  default-language: Haskell2010
