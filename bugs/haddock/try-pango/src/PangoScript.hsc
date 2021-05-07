@@ -2,13 +2,13 @@
 {-# LANGUAGE PatternSynonyms #-}
 {-# OPTIONS_GHC -Wall -fno-warn-tabs #-}
 
-module Graphics.Pango.Basic.ScriptsAndLanguages.PangoScript where
+module PangoScript where
 
 import Data.Word
 import Data.Int
 import Data.Char
 import System.IO.Unsafe
-import Graphics.Pango.Basic.ScriptsAndLanguages.Types
+import Types
 
 #include <pango/pango.h>
 
