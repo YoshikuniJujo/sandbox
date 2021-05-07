@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 225672782871e1074c45502d8a2ffbd070e55f2ec9fff7b36129e2bda61d29bb
+-- hash: 0684d7e53c146cdea285fbea7017743c2b38b0898110470c50011bfec2634b20
 
 name:           try-pango
 version:        0.1.0.0
@@ -27,7 +27,7 @@ source-repository head
 
 library
   exposed-modules:
-      PangoScript
+      Some
       Types
   other-modules:
       Paths_try_pango
