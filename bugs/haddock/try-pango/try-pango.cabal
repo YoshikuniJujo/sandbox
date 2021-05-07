@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 870d786fe89c932a2c83a990d6e89b2366f92c1c866e87efe3b64c769f151026
+-- hash: 225672782871e1074c45502d8a2ffbd070e55f2ec9fff7b36129e2bda61d29bb
 
 name:           try-pango
 version:        0.1.0.0
@@ -36,16 +36,6 @@ library
   pkgconfig-depends:
       pangocairo
   build-depends:
-      JuicyCairo
-    , JuicyPixels
-    , array
-    , base >=4.7 && <5
-    , bytestring
-    , cairo-image
-    , containers
-    , nowdoc
-    , primitive
-    , simple-cairo
+      base >=4.7 && <5
     , template-haskell
-    , text
   default-language: Haskell2010
